@@ -34,7 +34,14 @@ Now, a neural network defined by composing several equivariant layers $\mathcal{
 ![Image](https://haggaim.github.io/images/2019-7-17/image047.png)
 
 ## Representing graphs as tensors
-Instead of images, we would like to learn graphs, or more generally hypergraphs. Graphs and hypergraphs are mathematical objects that are widely used for representing structures ranging from social networks on the one hand to molecules, on the other hand. A graph can be defined as a set of  elements $n$ (nodes) for which we have some information $x_i$ attached to its i-th element, and some information attached to pairs of elements (edge), $x_{ij}$  will denote the information attached to the pair consisting of the i-th and j-th nodes. We will encode this data using a tensor $\mathbf{X}\in\mathbb{R}^{n\times n}$, where the diagonal elements $\mathbf{X}_{i,i}=x_i$ encode the node data and the off-diagonal elements, $\mathbf{X}_{i,j}=x_{ij}$, $i\ne j$ , the edge data (for clarity, we discuss a single feature dimension). A natural generalization of a graph is a hypergraph where information is attached not only to single elements and pairs of elements but also 3-tuples, 4-tuples, or in general k-tuples. We represent such data using $\mathbf{X}\in\mathbb{R}^{n^k}$, and each entry $\mathbf{X}_{i_1,i_2,\ldots,i_k}$ represents the information of the corresponding k-tuple of elements.  The images depict a simple graph and its tensor representation (matrix, top row) and a hypergraph of order 3 and its representing tensor (bottom row).
+Instead of images, we would like to learn graphs, or more generally hypergraphs. Graphs and hypergraphs are mathematical objects that are widely used for representing structures ranging from social networks on the one hand to molecules, on the other hand. A graph can be defined as a set of  elements $n$ (nodes) for which we have some information $x_i$ attached to its i-th element, and some information attached to pairs of elements (edge), $x_{ij}$  will denote the information attached to the pair consisting of the i-th and j-th nodes. 
+
+<!--
+We will encode this data using a tensor $\mathbf{X}\in\mathbb{R}^{n\times n}$, where the diagonal elements $\mathbf{X}_{i,i}=x_i$ encode the node data and the off-diagonal elements, $\mathbf{X}_{i,j}=x_{ij}$, $i\ne j$ , the edge data (for clarity, we discuss a single feature dimension). 
+-->
+
+
+A natural generalization of a graph is a hypergraph where information is attached not only to single elements and pairs of elements but also 3-tuples, 4-tuples, or in general k-tuples. We represent such data using $\mathbf{X}\in\mathbb{R}^{n^k}$, and each entry $\mathbf{X}_{i_1,i_2,\ldots,i_k}$ represents the information of the corresponding k-tuple of elements.  The images depict a simple graph and its tensor representation (matrix, top row) and a hypergraph of order 3 and its representing tensor (bottom row).
 
 ![Image](https://haggaim.github.io/images/2019-7-17/image064.png)
 
