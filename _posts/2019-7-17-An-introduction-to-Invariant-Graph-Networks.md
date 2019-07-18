@@ -67,7 +67,7 @@ How do we solve the fixed point equations? Any solution $L$ should be constant a
 
 ![Image](https://ylipman.github.io/images/2019-7-17/image197.png)
 
-An orthogonal basis to the equivariant operators can, in turn, be constructed by considering an equality pattern , e.g.,$\mathrm{bell}(4)=15$ , and the indicator tensor $B^\alpha_{i,j,s,t} = 1$ if and only if $(i,j,s,t)\in \alpha$. As shown in (Maron et al., 2019a) applying the equivariant operators can be done efficiently in $O(n^2)$ operations. As a result, a linear equivariant operator has the form $L = \sum_\alpha w_\alpha B^\alpha$, where $w_\alpha$ are the learnable parameters of the model. The figure illustrates the 15 different basis elements for $n=5, k=l=2$. Here, each square represents a matrix operating on the column stack of an $n\times n$ input tensor. Black pixels represent zero values, while white pixels represent the value 1. 
+An orthogonal basis to the equivariant operators can, in turn, be constructed by considering an equality pattern ,$\alpha$, and the indicator tensor $B^\alpha_{i,j,s,t} = 1$ if and only if $(i,j,s,t)\in \alpha$. As shown in (Maron et al., 2019a) applying the equivariant operators can be done efficiently in $O(n^2)$ operations. As a result, a linear equivariant operator has the form $L = \sum_\alpha w_\alpha B^\alpha$, where $w_\alpha$ are the learnable parameters of the model. The figure illustrates the 15 different basis elements for $n=5, k=l=2$. Here, each square represents a matrix operating on the column stack of an $n\times n$ input tensor. Black pixels represent zero values, while white pixels represent the value 1. 
 ![Image](https://ylipman.github.io/images/2019-7-17/image197.png)
 
 
