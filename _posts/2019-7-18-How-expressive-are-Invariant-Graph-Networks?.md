@@ -1,3 +1,5 @@
+Written by Haggai Maron and Yaron Lipman, *Weizmann Institute of Science*
+
 This is the second post summarizing the main ideas and constructions in a series of three recent papers (Maron et al., 2019 a,b,c). In this post we focus on (Maron et al., 2019b) that was presented at ICML 2019 and  an additional technical report (Maron et al., 2019c).
 
 Up until now, we have discussed a principled way of constructing invariant graph networks. Our next step is analyzing the expressive power of these models. Expressivity of graph neural networks is studied from different perspectives (Chen et al., 2019). In (Maron et al., 2019a,b) we studied the question: what kind of functions can IGNs approximate? More recently, in (Maron et al., 2019c), we study the capability of IGNs to discriminate non-isomorphic graphs. When we say that a model can discriminate between two non-isomorphic graphs $G_1,G_2$ we mean that there is a set of parameters for the IGN model that results in a function $f$ with the property $f(G_1)\neq f(G_2)$. Recall that by construction  $f(G_1)=f(G_2)$ if $G_1,G_2$ are isomorphic.
@@ -46,4 +48,3 @@ The following figure illustrates the expressiveness results for IGNs. It provide
 
 (Xu et al., 2019) Xu, K., Hu, W., Leskovec, J., and Jegelka, S. (2019). How powerful are graph neural networks? In International Conference on Learning Representations. 
 
-Written by Haggai Maron and Yaron Lipman, *Weizmann Institute of Science*

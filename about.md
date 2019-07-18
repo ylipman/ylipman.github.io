@@ -4,9 +4,11 @@ title: About
 permalink: /about/
 ---
 
-My name is [Haggai Maron](http://www.wisdom.weizmann.ac.il/~haggaim/), I am a PhD student at the Department of Computer Science and Applied Mathematics at the Weizmann Institute of Science under the supervision of Prof. Yaron Lipman. 
-My main fields of interest are machine learning, optimization and shape analysis. More specifically I am working on applying deep learning to irregular domains (e.g., graphs, point clouds, and surfaces) and graph/shape matching problems. 
 
-### Contact me
+### Contributors
+[Haggai Maron](mailto:haggai.maron@weizmann.ac.il)
+[Yaron Lipman](mailto:yaron.lipman@weizmann.ac.il)
 
-[haggai.maron@weizmann.ac.il](mailto:haggai.maron@weizmann.ac.il)
+### Goal
+Presenting and discussing ideas generalizing deep learning methods to handle irregular data. For example, point clouds, sets, graphs, hypergraphs, meshes, simplicial complexes, surfaces, manifolds. Contributions are welcome (just contact us).
+

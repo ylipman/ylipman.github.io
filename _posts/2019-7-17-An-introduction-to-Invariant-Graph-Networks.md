@@ -1,3 +1,5 @@
+Written by Haggai Maron and Yaron Lipman, *Weizmann Institute of Science*
+
 This is the first post summarizing the main ideas and constructions in a series of three recent papers (Maron et al., 2019 a,b,c) introducing and investigating a novel type of neural networks for learning irregular data such as graphs and hypergraphs. In this post we focus on (Maron et al., 2019a) that was presented at ICLR 2019  
 
 ## Algebraic view of convolutional neural networks.
@@ -96,4 +98,3 @@ In the general case, solving the fixed point equations for $l,k\in\mathbb{N}$ re
 (Zaheer et al., 2017) Zaheer, M., Kottur, S., Ravanbakhsh, S., Poczos, B., Salakhutdinov, R. R., and Smola, A. J. (2017). Deep sets. In Advances in Neural Information Processing Systems, pages 3391–3401
 
 
-Written by Haggai Maron and Yaron Lipman, *Weizmann Institute of Science*
