@@ -5,12 +5,12 @@ This is the first post summarizing the main ideas and constructions in a series 
 ## Algebraic view of convolutional neural networks.
 The goal of this note is presenting a family of neural network architectures suitable for learning irregular data in the form of graphs, or more generally, hypergraphs. This family presents a tradeoff between expressivity (i.e., the ability to approximate a large and complicated set of functions), and efficiency (i.e., the amount of time and space resources used by these architectures).
 
-![Image](https://ylipman.github.io/images/2019-7-17/image001.png)
+![Image](https://ylipman.github.io/images/2019-7-17/image001.png =300x)
 
 Image credit: hypergraph - Wikipedia
 
 The main idea (see right image)  is to adapt the concept of image convolutions, as a means of dramatically reducing the number of parameters in a neural network, to graph and hypergraph data. In more detail, translations of images are transformations  that do not change the image
-content, see e.g., the image above. Hence, most functions $f$ one is interested to learn on images, like image classification, will be invariant to translations, namely will satisfy $f(x)=f(T\cdot x)$  for all translations $T$, where $x$ represents the image, and $T$ the application of the translation  to the image.  
+content, see e.g., the image below. Hence, most functions $f$ one is interested to learn on images, like image classification, will be invariant to translations, namely will satisfy $f(x)=f(T\cdot x)$  for all translations $T$, where $x$ represents the image, and $T$ the application of the translation  to the image.  
 
 ![Image](https://ylipman.github.io/images/2019-7-17/image005.png)
 
