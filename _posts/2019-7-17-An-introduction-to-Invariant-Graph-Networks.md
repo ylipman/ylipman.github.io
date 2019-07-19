@@ -5,11 +5,11 @@ This is the first post summarizing the main ideas and constructions in a series 
 ## Algebraic view of convolutional neural networks.
 The goal of this note is presenting a family of neural network architectures suitable for learning irregular data in the form of graphs, or more generally, hypergraphs. This family presents a tradeoff between expressivity (i.e., the ability to approximate a large and complicated set of functions), and efficiency (i.e., the amount of time and space resources used by these architectures).
 
-![Image](https://ylipman.github.io/images/2019-7-17/image001.png =300x)
+![Image](https://ylipman.github.io/images/2019-7-17/image001.png)
 
 Image credit: hypergraph - Wikipedia
 
-The main idea (see right image)  is to adapt the concept of image convolutions, as a means of dramatically reducing the number of parameters in a neural network, to graph and hypergraph data. In more detail, translations of images are transformations  that do not change the image
+The main idea (see image above)  is to adapt the concept of image convolutions, as a means of dramatically reducing the number of parameters in a neural network, to graph and hypergraph data. In more detail, translations of images are transformations $T$ that do not change the image
 content, see e.g., the image below. Hence, most functions $f$ one is interested to learn on images, like image classification, will be invariant to translations, namely will satisfy $f(x)=f(T\cdot x)$  for all translations $T$, where $x$ represents the image, and $T$ the application of the translation  to the image.  
 
 ![Image](https://ylipman.github.io/images/2019-7-17/image005.png)
@@ -34,19 +34,17 @@ Now, a neural network defined by composing several equivariant layers $\mathcal{
 ![Image](https://ylipman.github.io/images/2019-7-17/image047.png)
 
 ## Representing graphs as tensors
-Instead of images, we would like to learn graphs, or more generally hypergraphs. Graphs and hypergraphs are mathematical objects that are widely used for representing structures ranging from social networks on the one hand to molecules, on the other hand. A graph can be defined as a set of  $n$ elements (nodes) for which we have some information $x_i$ attached to its i-th element, and some information attached to pairs of elements (edge), $x_{ij}$  will denote the information attached to the pair consisting of the i-th and j-th nodes. We will encode this data using a tensor $X\in\mathbb{R}^{n\times n}$, where the diagonal elements $X_{i,i} = x_i$ encode the node data and the off-diagonal elements, $X_{i,j} = x_{ij}$, $i\ne j$ , the edge data (for clarity, we discuss a single feature dimension). 
+Instead of images, we would like to learn graphs, or more generally hypergraphs. Graphs and hypergraphs are mathematical objects that are widely used for representing structures ranging from social networks on the one hand, to molecules, on the other hand. A graph can be defined as a set of  $n$ elements (nodes) for which we have some information $x_i$ attached to its i-th element, and some information attached to pairs of elements (edge), $x_{ij}$  will denote the information attached to the pair consisting of the i-th and j-th nodes. We will encode this data using a tensor $X\in\mathbb{R}^{n\times n}$, where the diagonal elements $X_{i,i} = x_i$ encode the node data and the off-diagonal elements, $X_{i,j} = x_{ij}$, $i\ne j$ , the edge data (for clarity, we discuss a single feature dimension). 
+![Image](https://ylipman.github.io/images/2019-7-17/image064.png)
 
 
 A natural generalization of a graph is a hypergraph where information is attached not only to single elements and pairs of elements but also 3-tuples, 4-tuples, or in general k-tuples. We represent such data using $X\in\mathbb{R}^{n^k}$, and each entry $X_{i_1,i_2,\ldots,i_k}$ represents the information of the corresponding k-tuple of elements.  The images depict a simple graph and its tensor representation (matrix, top row) and a hypergraph of order 3 and its representing tensor (bottom row).
+![Image](https://ylipman.github.io/images/2019-7-17/image074.png)
 
-![Image](https://ylipman.github.io/images/2019-7-17/image064.png)
 
 
 ## Symmetries of graphs
 Transformations that do “not change” the input data will be called symmetries. Translations are symmetries of images, but different kind of data, such as graphs may exhibit other symmetries. Note that in the representations of graphs introduced above, one can choose a different ordering of the set of nodes which affect the resulting tensor representation $X$. 
-
-![Image](https://ylipman.github.io/images/2019-7-17/image074.png)
-
 
 Two graphs $X,Y$ will be considered as the same (a.k.a. isomorphic) if there exists a permutation  so that $Y=p\cdot X$, where $p\cdot X$ is a rearrangement of the rows and columns of $X$ according to $p$, that is, the $(i,j)$ entry of $p \cdot X$ is $X_{p^{-1}(i),p^{-1}(j)}$.  Using $p^{-1}$ and not $p$ in this definition is to make this action a left action, but is pretty arbitrary and does not really matter in our discussion. See the inset image, where $P$ is the permutation matrix representing the permutation $p$. These symmetries generalize to hypergraphs where the permutation $p$ applied to all dimensions of $X\in\mathbb{R}^{n^k}$, namely the $(i_1,\ldots,i_k)$ entry of $(p\cdot X)$ is $X_{p^{-1}(i_1),\ldots,p^{-1}(i_k)}$. This action is visualised for an example of a 3-order tensor in the left image. Therefore, the symmetries of graph data are represented via the permutation group.
 
