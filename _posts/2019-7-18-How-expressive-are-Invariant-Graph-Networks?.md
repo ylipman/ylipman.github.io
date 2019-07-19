@@ -13,21 +13,21 @@ In (Maron et al., 2019c) we show that $k$-IGNs are tightly related to a hierarch
 
 This direction follows the prominent works of (Morris et al., 2019; Xu et al., 2019) that prove that message passing neural networks can discriminate between non-isomorphic graphs as well as the $1$-WL. Sadly, $1$-WL is not strong enough and, for example, cannot discriminate regular graphs such as the pair of graphs in the figure. (Morris et al., 2019) also suggests a message passing algorithm directly on $k$-tuples to achieve -WL discrimination power. 
 
-![Image](https://haggaim.github.io/images/2019-7-17/image250.png)
+![Image](https://ylipman.github.io/images/2019-7-17/image250.png)
 
 In (Maron et al., 2019) we prove that $k$-IGNs can discriminate graphs at least as good as the $k$-WL algorithm, for every . For example, $3$-WL already discriminates the pair regular graphs mentioned above.
 
 ## A simple and expressive variant of IGNs
 The main drawback of $k$-IGNs is the fact that one needs to store and process $k$-order tensors, limiting its applicability. In (Maron et al., 2019c) we suggest a variant of $2$-IGNs that is at least as expressive as the $3$-WL test. Hence, strictly more expressive than message passing models. This variant, which we call $2$-IGN+, consists of building blocks as follows (see inset): Each block is constructed with 3 different MLPs applied to the feature dimension of the input $2$-tensor. The outputs of two of these MLPs are multiplied feature-wise using regular matrix multiplication, while the output of the third MLP is concatenated to this product output. One of the main strengths of this model is its simplicity: MLPs on the feature dimension can be implemented by simple $1\times 1$ image convolution, while matrix multiplication is a basic operation that is supported by all deep learning frameworks. 
 
-![Image](https://haggaim.github.io/images/2019-7-17/image252.png)
+![Image](https://ylipman.github.io/images/2019-7-17/image252.png)
 
 Note that applying an MLP to the feature dimension can be seen as a particular simplified instance of IGN, using only a single linear equivariant operator, namely, scaled identity. When the feature dimension is one, scaled identity is a linear operator that takes as input $\mathbf{X}$ and outputs \mathbf{wX}, $w\in\mathbb{R}$. When the feature dimension of $\mathbf{X}$ is greater than one, $w$ becomes a matrix that is applied to the feature dimension. 
 Let us provide some intuition as to why matrix multiplication improves expressiveness. We will do that by showing matrix multiplication allows this model to distinguish between the two regular graphs discussed above, which are $1$-WL (and $2$-WL) indistinguishable. Consider the case the input tensor $\mathbf{X}$ representing a graph $G$ holds the adjacency matrix. We can build a network with 2 blocks computing $\mathbf{X}^3$ and then take the trace of this matrix (using the invariant layer). Recall that the $d$-th power of the adjacency matrix computes the number of $d$-paths between vertices; in particular, $\text{trace}(\mathbf{X}^3)$ computes the number of cycles of length 3. Counting shows the right graph has 0 such cycles while the left graph has 12. 
 
 ## Summary of the IGN expressiveness
 The following figure illustrates the expressiveness results for IGNs. It provides an overview of the main tradeoffs between efficiency and approximation power.
-![Image](https://haggaim.github.io/images/2019-7-17/image282.png)
+![Image](https://ylipman.github.io/images/2019-7-17/image282.png)
 
 
 ## Bibliography
