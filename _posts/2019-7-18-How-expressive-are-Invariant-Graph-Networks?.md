@@ -15,7 +15,7 @@ This direction follows the prominent works of (Morris et al., 2019; Xu et al., 2
 
 ![Image](https://ylipman.github.io/images/2019-7-17/image250.png)
 
-In (Maron et al., 2019) we prove that $k$-IGNs can discriminate graphs at least as good as the $k$-WL algorithm, for every . For example, $3$-WL already discriminates the pair regular graphs mentioned above.
+In (Maron et al., 2019) we prove that $k$-IGNs can discriminate graphs at least as good as the $k$-WL algorithm, for every $k$. For example, $3$-WL already discriminates the pair of regular graphs mentioned above.
 
 ## A simple and expressive variant of IGNs
 The main drawback of $k$-IGNs is the fact that one needs to store and process $k$-order tensors, limiting its applicability. In (Maron et al., 2019c) we suggest a variant of $2$-IGNs that is at least as expressive as the $3$-WL test. Hence, strictly more expressive than message passing models. This variant, which we call $2$-IGN+, consists of building blocks as follows (see inset): Each block is constructed with 3 different MLPs applied to the feature dimension of the input $2$-tensor. The outputs of two of these MLPs are multiplied feature-wise using regular matrix multiplication, while the output of the third MLP is concatenated to this product output. One of the main strengths of this model is its simplicity: MLPs on the feature dimension can be implemented by simple $1\times 1$ image convolution, while matrix multiplication is a basic operation that is supported by all deep learning frameworks. 
