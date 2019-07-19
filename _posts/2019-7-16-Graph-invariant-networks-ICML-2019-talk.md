@@ -1,6 +1,6 @@
 *Haggai Maron and Yaron Lipman, Weizmann Institute of Science*
 
-This is the third post summarizing the main ideas and constructions in a series of three recent papers (Maron et al., 2019 a,b,c). 
+A talk by Yaron lipman at the Learning and [Reasoning with Graph-Structured Representations workshop] (https://graphreason.github.io/index.html) at ICML 2019, summarizing the papers below.
 
 <div id="presentation-embed-38917604"></div>
 <script src='https://slideslive.com/embed_presentation.js'></script>
