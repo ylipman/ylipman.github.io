@@ -45,6 +45,7 @@ A natural generalization of a graph is a hypergraph where information is attache
 
 ## Symmetries of graphs
 Transformations that do “not change” the input data will be called symmetries. Translations are symmetries of images, but different kind of data, such as graphs may exhibit other symmetries. Note that in the representations of graphs introduced above, one can choose a different ordering of the set of nodes which affect the resulting tensor representation $X$. 
+![Image](https://ylipman.github.io/images/2019-7-17/image081.png)
 
 Two graphs $X,Y$ will be considered as the same (a.k.a. isomorphic) if there exists a permutation  so that $Y=p\cdot X$, where $p\cdot X$ is a rearrangement of the rows and columns of $X$ according to $p$, that is, the $(i,j)$ entry of $p \cdot X$ is $X_{p^{-1}(i),p^{-1}(j)}$.  Using $p^{-1}$ and not $p$ in this definition is to make this action a left action, but is pretty arbitrary and does not really matter in our discussion. See the inset image, where $P$ is the permutation matrix representing the permutation $p$. These symmetries generalize to hypergraphs where the permutation $p$ applied to all dimensions of $X\in\mathbb{R}^{n^k}$, namely the $(i_1,\ldots,i_k)$ entry of $(p\cdot X)$ is $X_{p^{-1}(i_1),\ldots,p^{-1}(i_k)}$. This action is visualised for an example of a 3-order tensor in the left image. Therefore, the symmetries of graph data are represented via the permutation group.
 
