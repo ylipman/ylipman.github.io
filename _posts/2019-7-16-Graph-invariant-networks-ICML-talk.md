@@ -1,6 +1,6 @@
 *Yaron Lipman, Weizmann Institute of Science*
 
-A talk by Yaron lipman at the Learning and [Reasoning with Graph-Structured Representations workshop](https://graphreason.github.io/index.html) at ICML 2019, summarizing the papers below.
+A talk by Yaron lipman at the Learning and [Reasoning with Graph-Structured Representations workshop]https://graphreason.github.io/index.html) at ICML 2019, summarizing the papers below.
 
 <div id="presentation-embed-38917604"></div>
 <script src='https://slideslive.com/embed_presentation.js'></script>
