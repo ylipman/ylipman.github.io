@@ -44,7 +44,7 @@ The following figure illustrates the expressiveness results for IGNs. It provide
 
 (Maron et al., 2019b) Maron, H., Fetaya, E., Segol, N., and Lipman, Y. (2019b). On the universality of invariant networks. In International conference on machine learning. 
 
-(Maron et al., 2019c) Maron, H., Ben-Hamu, H., Serviansky, H., and Lipman, Y. (2019c). Provably powerful graph networks. arXiv preprint arXiv:1905.11136.
+(Maron et al., 2019c) Maron, H., Ben-Hamu, H., Serviansky, H., and Lipman, Y. (2019c). Provably powerful graph networks. Advances in Neural Information Processing Systems.
 
 (Morris et al., 2018) Morris, C., Ritzert, M., Fey, M., Hamilton, W. L., Lenssen, J. E., Rattan, G., and Grohe, M. (2018). Weisfeiler and leman go neural: Higher-order graph neural networks. arXiv preprint arXiv:1810.02244. 
 
